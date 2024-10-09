@@ -1,0 +1,17 @@
+NRQL_BASE: "TIMESERIES 1 minute SLIDE BY MAX SINCE 6 HOURS AGO"
+
+tabs:
+  - name: "9. Debugging"
+    event: VarnishSample
+    metrics:
+      - name: shm.
+      - name: session.
+      - name: mgt.
+      - name: lock.
+        event: VarnishLockSample
+      - name: lru.
+      - name: hcb.
+  - name: "8. Backend"
+    event: VarnishSample
+    metrics:
+      - name: backend.
